@@ -8,7 +8,6 @@
 #define pot A0
 
 int valorPot=0;
-int peticion=0;
 void setup() {
   pinMode(led_verde,OUTPUT);
   pinMode(led_amarillo,OUTPUT);
