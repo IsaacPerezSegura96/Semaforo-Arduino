@@ -37,7 +37,7 @@ void loop() {
     
     digitalWrite(led_verdePeaton,HIGH);
     digitalWrite(led_rojoPeaton,LOW);
-    delay(valorPot);
+    if(valorPot<1000){delay(1000);}else{delay(valorPot);}
 
     digitalWrite(led_verde,HIGH);
     digitalWrite(led_amarillo,LOW);
