@@ -4,7 +4,6 @@
 #define boton 4
 #define led_rojoPeaton 3
 #define led_verdePeaton 2
-
 #define pot A0
 
 int valorPot=0;
@@ -37,7 +36,11 @@ void loop() {
     
     digitalWrite(led_verdePeaton,HIGH);
     digitalWrite(led_rojoPeaton,LOW);
-    if(valorPot<1000){delay(1000);}else{delay(valorPot+1000);}
+    if(valorPot<500){
+      delay(1000);
+    }else{
+        delay(valorPot+1000);
+    }
 
     digitalWrite(led_verde,HIGH);
     digitalWrite(led_amarillo,LOW);
