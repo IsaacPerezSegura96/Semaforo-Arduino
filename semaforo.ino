@@ -27,31 +27,23 @@ void setup() {
 void loop() {
   valorPot = analogRead(pot);
   if(digitalRead(boton)==HIGH){
-    delay(valorPot+1000);
-    digitalWrite(led_rojo,HIGH);
-    digitalWrite(led_verde,LOW);
-    digitalWrite(led_amarillo,LOW);
-    
-    digitalWrite(led_rojoPeaton,LOW);
-    digitalWrite(led_verdePeaton,HIGH);
-    delay(2000);
-    digitalWrite(led_rojo,LOW);
-    digitalWrite(led_verde,HIGH);
-    digitalWrite(led_rojoPeaton,HIGH);
-    digitalWrite(led_verdePeaton,LOW);
-  }else{
-    delay(valorPot+1000);
     digitalWrite(led_verde,LOW);
     digitalWrite(led_amarillo,HIGH);
-    delay(500);  
+    digitalWrite(led_rojo,LOW);
+    delay(1000);
+    digitalWrite(led_verde,LOW);
     digitalWrite(led_amarillo,LOW);
     digitalWrite(led_rojo,HIGH);
-    digitalWrite(led_rojoPeaton,LOW);
+    
     digitalWrite(led_verdePeaton,HIGH);
-    delay(1000);
-    digitalWrite(led_rojo,LOW);
+    digitalWrite(led_rojoPeaton,LOW);
+    delay(valorPot);
+
     digitalWrite(led_verde,HIGH);
-    digitalWrite(led_rojoPeaton,HIGH);
+    digitalWrite(led_amarillo,LOW);
+    digitalWrite(led_rojo,LOW);
+    
     digitalWrite(led_verdePeaton,LOW);
+    digitalWrite(led_rojoPeaton,HIGH);
   }
 }
